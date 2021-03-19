@@ -1,17 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <p>{{ name }}</p>
+
+  <Form msg="Welcome to Your Vue.js App" @nameChange="updateName($event)" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Form from './components/Form.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Form,
+  },
+  data() {
+    return {
+      name: '',
+    };
+  },
+  methods: {
+    updateName(name) {
+      console.log('yolo');
+      this.name = name;
+    },
+  },
+};
 </script>
 
 <style>
