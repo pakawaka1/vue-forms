@@ -20,7 +20,6 @@ export default {
   },
   methods: {
     updateName(name) {
-      console.log('yolo');
       this.name = name;
     },
   },
